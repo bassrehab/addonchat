@@ -153,16 +153,7 @@ public class Bot
         b.a(c1);
     }
 
-    public synchronized void doNickChange(String s, String s1)
-    {
-        b.a(38, s, s1);
-    }
-
-    public synchronized void doNickChange(String s)
-    {
-        b.a(38, s);
-    }
-
+  
     public synchronized void doPrivateMessageSend(String s, String s1, Color color)
     {
         c c1 = new c();
@@ -175,38 +166,14 @@ public class Bot
         b.a(c1);
     }
 
-    public synchronized void doPrivateMessageSend(String s, String s1)
-    {
-        c c1 = new c();
-        c1.a = 12;
-        c1.e = s;
-        c1.f = s1;
-        b.a(c1);
-    }
-
-    public synchronized void doPrivateActionSend(String s, String s1)
-    {
-        c c1 = new c();
-        c1.a = 16;
-        c1.e = s;
-        c1.f = s1;
-        b.a(c1);
-    }
-
-    public synchronized void doPrivateMessageCloseWindow(String s)
-    {
-        b.a(14, s);
-    }
-
-    public synchronized void doRoomCreate(String s, String s1)
-    {
-        b.a(17, s, s1);
-    }
+    // Set bot status
 
     public synchronized void doStatusSet(int i)
     {
         b.a(18, i);
     }
+
+   // Alert MODS in Chat a report abuse event has occured at the LV chat system
 
     public synchronized void doModSendMessage(String s, String s1, String s2, Color color, int i)
     {
@@ -238,15 +205,8 @@ public class Bot
         b.a(100, i);
     }
 
-    public synchronized void doModRoomToggle(String s, boolean flag)
-    {
-        b.a(flag ? 35 : 36, s);
-    }
-
-    public synchronized void doRoomClose(String s)
-    {
-        b.a(34, s);
-    }
+    
+ /// Just for fun no good use vis-a-vis the current idea
 
     public synchronized void doUserKick(String s)
     {
@@ -273,46 +233,14 @@ public class Bot
         b.a(23, s);
     }
 
-    public synchronized void doUserQueryLocation(String s)
-    {
-        b.a(11006, s);
-    }
-
-    public synchronized void doUserNickChange(String s, String s1)
-    {
-        b.a(40, s, s1);
-    }
+ 
 
     public synchronized void doEtherQuery()
     {
         b.a(49);
     }
 
-    public synchronized void doUserSetAdmin(String s, boolean flag)
-    {
-        b.a(flag ? 24 : 27, s);
-    }
-
-    public synchronized void doUserSetModerator(String s, boolean flag)
-    {
-        b.a(flag ? 25 : 28, s);
-    }
-
-    public synchronized void doUserSetGuestSpeaker(String s, boolean flag)
-    {
-        b.a(flag ? 30 : 31, s);
-    }
-
-    public synchronized void doUserSetVIP(String s, boolean flag)
-    {
-        b.a(flag ? 60 : 61, s);
-    }
-
-    public synchronized void doUserSetSilenced(String s, boolean flag)
-    {
-        b.a(flag ? 26 : 29, s);
-    }
-
+   
     public synchronized void doRoomTopic(String s, String s1)
     {
         b.a(54, s, s1);
@@ -323,10 +251,7 @@ public class Bot
         b.a(53, s, s1, s2);
     }
 
-    public synchronized void doRoomTransfer(String s, String s1)
-    {
-        b.a(59, s, s1, null);
-    }
+   //IMPORTANT
 
     public synchronized void doNoticeSystem(String s, String s1)
     {
@@ -368,306 +293,7 @@ public class Bot
         b.a(52, s, url.toString());
     }
 
-    public synchronized void doNoticeRandom(String s, int i)
-    {
-        b.a(50, null, s, null, i);
-    }
-
-    public synchronized void doHistoryClearRoom(String s)
-    {
-        b.a(55, s);
-    }
-
-    public synchronized void doHistoryClearAll()
-    {
-        b.a(56);
-    }
-
-    public synchronized void doScreenClearRoom(String s)
-    {
-        b.a(57, s);
-    }
-
-    public synchronized void doScreenClearAll()
-    {
-        b.a(58);
-    }
-
-    public void onMyRoomJoinSuccess(String s)
-    {
-    }
-
-    public void onMyLoginSuccess()
-    {
-    }
-
-    public void onMyInvalidLogin()
-    {
-    }
-
-    public void onMyBan()
-    {
-    }
-
-    public void onMyDisconnect()
-    {
-    }
-
-    public void onMyAccessDenied()
-    {
-    }
-
-    public void onMyIdleKick()
-    {
-    }
-
-    public void onMyUsernameInUse()
-    {
-    }
-
-    public void onMyIPInUse()
-    {
-    }
-
-    public void onMyFloodWarning()
-    {
-    }
-
-    public void onMyFloodKick()
-    {
-    }
-
-    public void onMyKick()
-    {
-    }
-
-    public void onMyInvalidRoomJoin(String s)
-    {
-    }
-
-    public void onMyCannotCreateRoom()
-    {
-    }
-
-    public void onMyNoModeratorAvailable()
-    {
-    }
-
-    public void onMyMessageSubmittedToModerator()
-    {
-    }
-
-    public void onMyInvalidNickChange()
-    {
-    }
-
-    public void onModerateMessageHandled(int i)
-    {
-    }
-
-    public void onModerateMessage(int i, String s, String s1, String s2, Color color, int j)
-    {
-    }
-
-    public void onModerateAction(int i, String s, String s1, String s2, int j)
-    {
-    }
-
-    public void onServerReset()
-    {
-    }
-
-    public void onServerUnavailable()
-    {
-    }
-
-    public void onServerAtCapacity()
-    {
-    }
-
-    public void onServerConnectionLost()
-    {
-    }
-
-    public void onServerPingResponse()
-    {
-    }
-
-    public void onServerShutdownNotice(int i, int j)
-    {
-    }
-
-    public void onPublicMessage(String s, String s1, String s2, Color color, int i)
-    {
-    }
-
-    public void onPublicAction(String s, String s1, String s2, int i)
-    {
-    }
-
-    public void onPrivateMessage(String s, String s1, Color color)
-    {
-    }
-
-    public void onPrivateAction(String s, String s1)
-    {
-    }
-
-    public void onPrivateMessageWindowClosed(String s)
-    {
-    }
-
-    public void onSystemMessage(String s)
-    {
-    }
-
-    public void onModeratorNotice(String s, String s1)
-    {
-    }
-
-    public void onSpeakerNotice(String s, String s1)
-    {
-    }
-
-    public void onAdminNotice(String s, String s1)
-    {
-    }
-
-    public void onRandomNumber(int i)
-    {
-    }
-
-    public void onRoomPresent(String s)
-    {
-    }
-
-    public void onRoomClose(String s)
-    {
-    }
-
-    public void onRoomNotExist(String s)
-    {
-    }
-
-    public void onRoomAtCapacity(String s)
-    {
-    }
-
-    public void onRoomUnavailable(String s)
-    {
-    }
-
-    public void onRoomHistoryMessage(String s, String s1, String s2, int i)
-    {
-    }
-
-    public void onRoomEntry(String s, String s1)
-    {
-    }
-
-    public void onRoomDeparture(String s, String s1)
-    {
-    }
-
-    public void onRoomToggleModerated(String s, boolean flag)
-    {
-    }
-
-    public void onRoomSetTopic(String s, String s1)
-    {
-    }
-
-    public void onUserLogin(String s, String s1, String s2)
-    {
-    }
-
-    public void onUserLogout(String s)
-    {
-    }
-
-    public void onUserNameChange(String s, String s1)
-    {
-    }
-
-    public void onUserNotExist(String s)
-    {
-    }
-
-    public void onUserKicked(String s)
-    {
-    }
-
-    public void onUserBanned(String s)
-    {
-    }
-
-    public void onUserInEther(String s, String s1)
-    {
-    }
-
-    public void onUserSetInRoom(String s, String s1)
-    {
-    }
-
-    public void onUserSetStatus(String s, int i)
-    {
-    }
-
-    public void onUserSetIcon(String s, int i)
-    {
-    }
-
-    public void onUserSetDevice(String s, int i)
-    {
-    }
-
-    public void onUserToggleAdmin(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleModerator(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleSpeaker(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleTempAdmin(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleVIP(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleTempMod(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleTempSpeaker(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleSilenced(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleCloaked(String s, boolean flag)
-    {
-    }
-
-    public void onUserToggleIgnore(String s, String s1, boolean flag)
-    {
-    }
-
-    public void onUserIPQueryResponse(String s, String s1)
-    {
-    }
-
-    public void onUserGeoQueryResponse(String s, String s1, String s2)
-    {
-    }
+   
 
     private d a;
     private f b;
